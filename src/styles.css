@@ -1,7 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~angular-tree-component/dist/angular-tree-component.css';
 
+.fontSizeDef{
+    font-size:  1.625em
+}
+li:hover { 
+    background-color: lightblue;
+}
 
+.paddingDefSub{
+    padding-left:10px;
+}
+.paddingDefSubOfSon{
+    padding-left:25px;
+}
+ul, menu, dir {
+    display: contents;
+    list-style-type: disc;
+   -webkit-margin-before: 1em;
+   -webkit-margin-after: 1em;
+   -webkit-margin-start: 0px;
+   -webkit-margin-end: 0px;
+   -webkit-padding-start: 40px; 
+}  
 
 
 

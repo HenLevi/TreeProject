@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TreeModule } from 'angular-tree-component';
+
 
 @NgModule({
   declarations: [
@@ -12,8 +12,8 @@ import { TreeModule } from 'angular-tree-component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot(),
-    TreeModule
+    NgbModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div >
+<div>
   <br>
   <h1 class="pull-left">
     Contact Tree
@@ -7,16 +6,21 @@
 </div>
 <br>
 
-<tree-root [nodes]="contacts" [options]="options">
-</tree-root>
+<ul class="fontSizeDef ">
+  <li *ngFor=" let c of contacts">
+    <span (click)="isCollapsed = !isCollapsed">{{c.name}}
 
-
-
-
-
-
-
-
-
-
-    
+    </span>
+    <ul>
+      <li *ngFor=" let c1 of c.contacts"  [ngbCollapse]="!isCollapsed">
+        <span  (click)="isCollapsedSon = !isCollapsedSon" class="paddingDefSub">
+        {{c1.name}}</span>
+        <ul>
+          <li *ngFor=" let c2 of c1.contacts" [ngbCollapse]="!isCollapsedSon">
+            <span  class="paddingDefSubOfSon"> {{c2.name}} </span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
